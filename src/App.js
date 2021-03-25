@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Blockquote from '@coopdigital/blockquote';
 
+/**
+ * ISSUE: Cannot import file from node_modules src e.g.
+ // import Broken from '../node_modules/@coopdigital/blockquote/src/index.mjs';
+ * TODO: look into importing files outside of src in CRA
+ */
 function App() {
   return (
     <div className="App">
@@ -18,6 +24,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <Blockquote quote="This is a example quote from blockquote component " citation="dale" quoteLarge />
+        <Blockquote quote="This is another example quote that isn't set to large" citation="new citation"/>
+      </main>
     </div>
   );
 }
